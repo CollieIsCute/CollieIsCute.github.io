@@ -28,7 +28,7 @@ jobs:
           echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git pull --recursive-submodules
+          git pull --recurse-submodules
           git config --global user.name "Collie Hexo CI"
           git config --global user.email "qetup1988@gmail.com"
       - name: Install dependencies
