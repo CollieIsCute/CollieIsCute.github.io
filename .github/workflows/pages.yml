@@ -23,9 +23,7 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: |
-          pwd
-          git submodule update --remote
-          ls *
+          git pull --recurse-submodules
           ls themes/next
           npm install
       - name: Build
