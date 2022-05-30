@@ -22,12 +22,14 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: git submodule update --remote && npm install
+        run: |
+          pwd
+          git submodule update --remote
+          npm install
       - name: Build
         run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        run: hexo server -d
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
