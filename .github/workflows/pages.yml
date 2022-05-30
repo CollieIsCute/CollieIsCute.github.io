@@ -25,6 +25,8 @@ jobs:
         run: |
           pwd
           git submodule update --remote
+          ls *
+          ls themes/next
           npm install
       - name: Build
         run: npm run build
