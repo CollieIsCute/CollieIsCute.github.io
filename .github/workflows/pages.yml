@@ -21,10 +21,12 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
+      - name: Checkout repository
+        uses: actions/checkout@master
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
       - name: Install Dependencies
         run: |
-          git submodule update --remote
-          git pull --recurse-submodules
           ls themes/*
           npm install
       - name: Build
