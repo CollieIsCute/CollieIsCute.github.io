@@ -1,6 +1,0 @@
-[submodule "themes/themes/next"]
-	path = themes/themes/next
-	url = git@github.com:CollieIsCute/hexo-theme-next.git
-[submodule "themes/next"]
-	path = themes/next
-	url = git@github.com:CollieIsCute/hexo-theme-next.git
