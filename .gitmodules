@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-serial-programmer"]
+	path = themes/hugo-theme-serial-programmer
+	url = git@github.com:sharadcodes/hugo-theme-serial-programmer.git

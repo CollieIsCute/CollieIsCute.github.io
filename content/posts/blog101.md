@@ -1,10 +1,7 @@
 ---
 title: blog 101
-tag:
-  - hexo
-  - docker
-  - ruby
-  - blog
+tag: ["blog", "docker", "hugo"]
+date: 2022-10-08
 ---
 
 ## 內容預告  

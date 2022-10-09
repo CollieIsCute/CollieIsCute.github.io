@@ -1,8 +1,7 @@
 ---
 title: driving-lessons-1
-tag:
-  - daily
-  - skills
+tag: ["daily", "skills"]
+date: 2022-04-06
 ---
 
 - __這是我在大四下考駕照的紀錄，僅以此獻給我偉大的駕訓班 裏鍵張 教練。__ （在此就不要拿真的名字來用，人家也是要靠這行吃飯的）

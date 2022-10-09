@@ -1,0 +1,4 @@
+baseURL = 'https://collieiscute.github.io'
+languageCode = 'en-us'
+title = "Collie's Blog"
+theme = "hugo-theme-serial-programmer"
