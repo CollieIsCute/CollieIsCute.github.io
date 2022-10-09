@@ -1,6 +1,6 @@
 ---
 title: blog 101
-tag: ["blog", "docker", "hugo"]
+tags: ["blog", "docker", "hugo"]
 date: 2022-10-08
 ---
 

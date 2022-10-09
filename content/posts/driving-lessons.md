@@ -1,6 +1,6 @@
 ---
 title: driving-lessons-1
-tag: ["daily", "skills"]
+tags: ["daily", "skills"]
 date: 2022-04-06
 ---
 
