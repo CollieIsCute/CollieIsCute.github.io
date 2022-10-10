@@ -1,5 +1,5 @@
 ---
-title: driving-lessons-1
+title: driving lessons 1
 tags: ["daily", "skills"]
 date: 2022-04-06
 ---
