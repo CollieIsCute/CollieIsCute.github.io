@@ -5,7 +5,11 @@ tags: ["leetcode"]
 ---
 
 ## 部落格的 leetcode 區用途
-想要在這個 leetcode 文章區紀錄
+
+### [Leetcode solutions](https://github.com/CollieIsCute/leetcode)
+
+### 想要在這個 leetcode 文章區紀錄
+
 1. 我在刷題時遇到的一些坑
 2. 看完覺得很酷的解題技巧
 3. 一些亂搞的奇技淫巧(可能是好笑的假解之類的~)
