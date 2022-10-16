@@ -1,6 +1,7 @@
+title = "Collie's Blog"
 baseURL = 'https://collieiscute.github.io/'
 languageCode = 'en-us'
-title = "Collie's Blog"
+
 
 # Change the default theme to be use when building the site with Hugo
 theme = "FixIt"
@@ -28,15 +29,15 @@ theme = "FixIt"
       # set menu item type, optional value: ["mobile", "desktop"]
       type = ""
   [[menu.main]]
-    identifier = "categories"
+    identifier = "leetcode"
     pre = ""
     post = ""
-    name = "Categories"
-    url = "/categories/"
+    name = "Leetcode"
+    url = "/leetcode/"
     title = ""
     weight = 2
     [menu.main.params]
-      icon = "fa-solid fa-th"
+      icon = "fa-solid fa-archive"
   [[menu.main]]
     identifier = "tags"
     pre = ""
