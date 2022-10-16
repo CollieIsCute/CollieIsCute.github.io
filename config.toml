@@ -1,4 +1,56 @@
 baseURL = 'https://collieiscute.github.io/'
 languageCode = 'en-us'
 title = "Collie's Blog"
-theme = "hugo-theme-serial-programmer"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "FixIt"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 1
+    # add user-defined content to menu items
+    [menu.main.params]
+      # add css class to a specific menu item
+      class = ""
+      # whether set as a draft menu item whose function is similar to a draft post/page
+      draft = false
+      # add fontawesome icon to a specific menu item
+      icon = "fa-solid fa-archive"
+      # set menu item type, optional value: ["mobile", "desktop"]
+      type = ""
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 2
+    [menu.main.params]
+      icon = "fa-solid fa-th"
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 3
+    [menu.main.params]
+      icon = "fa-solid fa-tags"
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/hugo-fixit/FixIt/issues/43)
+    noClasses = false
