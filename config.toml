@@ -1,6 +1,8 @@
 title = "Collie's Blog"
 baseURL = 'https://collieiscute.github.io/'
-languageCode = 'en-us'
+defaultContentLanguage = "zh-tw"
+languageCode = 'zh-TW'
+hasCJKLanguage = true #字數統計計入中文
 
 
 # Change the default theme to be use when building the site with Hugo
