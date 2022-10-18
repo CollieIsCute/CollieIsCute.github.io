@@ -58,6 +58,6 @@
 
 ---
 
-> Author:   
+> 作者:   
 > URL: https://collieiscute.github.io/driving-lessons/  
 

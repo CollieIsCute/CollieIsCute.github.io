@@ -8,6 +8,6 @@ __內容待補__
 
 ---
 
-> Author:   
+> 作者:   
 > URL: https://collieiscute.github.io/blog101/  
 
