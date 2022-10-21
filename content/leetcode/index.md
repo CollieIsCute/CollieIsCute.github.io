@@ -1,7 +1,43 @@
 ---
-title: "Status"
+title: "Leetcode 區首頁"
 date: 2022-10-11T01:08:41+08:00
 tags: ["leetcode"]
+
+draft: false
+author: ""
+authorLink: ""
+authorEmail: ""
+description: ""
+keywords: ""
+license: ""
+comment: false
+weight: 0
+
+tags:
+- leetcode
+- daily
+
+hiddenFromHomePage: false
+hiddenFromSearch: false
+
+summary: ""
+resources:
+- name: featured-image
+  src: featured-image.jpg
+- name: featured-image-preview
+  src: featured-image-preview.jpg
+
+toc:
+  enable: true
+math:
+  enable: false
+lightgallery: false
+seo:
+  images: []
+
+repost:
+  enable: true
+  url: ""
 ---
 
 ## 部落格的 leetcode 區用途

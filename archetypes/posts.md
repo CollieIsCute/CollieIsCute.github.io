@@ -13,7 +13,9 @@ comment: false
 weight: 0
 
 tags:
-- leetcode
+- draft
+categories:
+- draft
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -36,10 +38,8 @@ seo:
 repost:
   enable: true
   url: ""
+
+# See details front matter: https://fixit.lruihao.cn/theme-documentation-content/#front-matter
 ---
 
-
-
-## 值得紀錄之處
-
-## Solution
+<!--more-->
