@@ -2,6 +2,41 @@
 title: 考駕照奇遇記-1
 tags: ["daily"]
 date: 2022-04-06
+subtitle: ""
+draft: false
+author: ""
+authorLink: ""
+authorEmail: ""
+description: ""
+keywords: ""
+license: ""
+comment: false
+weight: 0
+
+tags:
+- daily
+
+hiddenFromHomePage: false
+hiddenFromSearch: false
+
+summary: ""
+resources:
+- name: featured-image
+  src: featured-image.jpg
+- name: featured-image-preview
+  src: featured-image-preview.jpg
+
+toc:
+  enable: true
+math:
+  enable: false
+lightgallery: false
+seo:
+  images: []
+
+repost:
+  enable: false
+  url: ""
 ---
 
 - __這是我在大四下考駕照的紀錄，僅以此獻給我偉大的駕訓班 裏鍵張 教練。__ （在此就不要拿真的名字來用，人家也是要靠這行吃飯的）

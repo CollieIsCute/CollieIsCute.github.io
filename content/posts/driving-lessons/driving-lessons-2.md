@@ -1,7 +1,41 @@
 ---
 title: 考駕照奇遇記-2 (完)
-tags: ["daily"]
 date: 2022-04-06
+subtitle: ""
+draft: false
+author: ""
+authorLink: ""
+authorEmail: ""
+description: ""
+keywords: ""
+license: ""
+comment: false
+weight: 0
+
+tags:
+- daily
+
+hiddenFromHomePage: false
+hiddenFromSearch: false
+
+summary: ""
+resources:
+- name: featured-image
+  src: featured-image.jpg
+- name: featured-image-preview
+  src: featured-image-preview.jpg
+
+toc:
+  enable: true
+math:
+  enable: false
+lightgallery: false
+seo:
+  images: []
+
+repost:
+  enable: false
+  url: ""
 ---
 
 ## 全場滑手機
