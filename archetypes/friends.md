@@ -4,7 +4,7 @@ subtitle: ""
 type: "friends"
 date: {{ .Date }}
 description: "{{ .Site.Author.name }}'s friends"
-keywords: 
+keywords:
   - Hugo
   - friends tempalate
 comment: false

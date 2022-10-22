@@ -34,7 +34,7 @@ seo:
   images: []
 
 repost:
-  enable: true
+  enable: false
   url: ""
 ---
 
