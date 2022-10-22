@@ -53,11 +53,11 @@ theme = "FixIt"
 
 [params]
   # site description
-  description = "紀錄遇到的有趣經歷、或者技術坑"
+  description = ""
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "dark"
   #  date format
-  dateFormat = "2006, Jan, 02"
+  dateFormat = "2006 Jan 02"
   # website images for Open Graph and Twitter Cards
   images = ["/logo.png"]
   #  enable PWA
@@ -161,7 +161,7 @@ theme = "FixIt"
     # special amount of posts in each section page
     paginate = 20
     # date format (month and day)
-    dateFormat = "01-02"
+    dateFormat = "2006 Jan 2"
     # amount of RSS pages
     rss = 10
     #  recently updated posts settings
@@ -176,7 +176,7 @@ theme = "FixIt"
     # special amount of posts in each list page
     paginate = 20
     # date format (month and day)
-    dateFormat = "01-02"
+    dateFormat = "2006 Jan 2"
     # amount of RSS pages
     rss = 10
 
