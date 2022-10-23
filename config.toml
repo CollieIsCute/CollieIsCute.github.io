@@ -188,7 +188,7 @@ theme = "FixIt"
     [params.home.profile]
       enable = true
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = "xx@xx.com"
+      gravatarEmail = "qetup1988@gmail.com"
       # URL of avatar shown in home page
       avatarURL = "https://avatars.githubusercontent.com/u/43088530?v=4"
       #  title shown in home page (HTML format is supported)
@@ -597,8 +597,8 @@ theme = "FixIt"
 
   #  GitHub banner in the top-right or top-left corner
   [params.githubCorner]
-    enable = false
-    permalink = "https://github.com/hugo-fixit/FixIt"
+    enable = true
+    permalink = "https://github.com/CollieIsCute/CollieIsCute.github.io"
     title = "View source on GitHub"
     position = "right" # ["left", "right"]
 
