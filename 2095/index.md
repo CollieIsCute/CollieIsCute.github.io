@@ -18,17 +18,17 @@
 ```cpp
 class Solution {
 public:
-    ListNode* deleteMiddle(ListNode* head) {
-        if (head -> next == nullptr)
-            return nullptr;
-        ListNode *slow = head, *fast = head -> next -> next;
-        while (fast != nullptr && fast -> next != nullptr) {
-            slow = slow -> next;
-            fast = fast -> next -> next;
-        }
-        slow -> next = slow -> next -> next;
-        return head;
-    }
+	ListNode* deleteMiddle(ListNode* head) {
+		if (head -> next == nullptr)
+			return nullptr;
+		ListNode *slow = head, *fast = head -> next -> next;
+		while (fast != nullptr && fast -> next != nullptr) {
+			slow = slow -> next;
+			fast = fast -> next -> next;
+		}
+		slow -> next = slow -> next -> next;
+		return head;
+	}
 };
 ```
 可以注意到，上面的解法會有一個特例 (edge case), 如果開頭是 `nullptr`, 那就如何如何......。有時候特例一多，有時候會寫了整面的 `if-else`, 看了就痛苦😵‍💫。如果有個魔法可以使這個特例更減少，那程式碼就可以更精簡，這也是我這次的練習目標。
@@ -51,11 +51,11 @@ public:
 ```cpp
 class Solution {
 public:
-    ListNode* deleteMiddle(ListNode* head) {
-    ListNode **indirect_del = &head, *fast = head;
-    // 利用 go_next 去判斷 indirect_del 需不需要前進一格
-    for(bool go_next = false; fast; fast = fast->next, go_next = !go_next)
-      indirect_del = go_next ? &(*indirect_del)->next : indirect_del;
+	ListNode* deleteMiddle(ListNode* head) {
+	ListNode **indirect_del = &head, *fast = head;
+	// 利用 go_next 去判斷 indirect_del 需不需要前進一格
+	for(bool go_next = false; fast; fast = fast->next, go_next = !go_next)
+		indirect_del = go_next ? &(*indirect_del)->next : indirect_del;
 		*indirect_del = (*indirect_del)->next;
 		return head;
 	}
