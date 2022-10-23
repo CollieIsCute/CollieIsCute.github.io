@@ -1,11 +1,12 @@
 # 2095. Delete the Middle Node of a Linked List
 
 
-## 原始題目
+拜讀了[你所不知道的 C 語言： linked list 和非連續記憶體](https://hackmd.io/@sysprog/c-linked-list#%E5%BE%9E-Linux-%E6%A0%B8%E5%BF%83%E7%9A%84%E8%97%9D%E8%A1%93%E8%AB%87%E8%B5%B7)一文中所提到的 "__good taste__" 段落 , 覺得非常有趣而躍躍欲試，所以找這題來練練手。（後來發現底下的例子也有寫到這題😅，而且效率又比我想到的解更好，甚至還有一些記憶體管理的細節，學到了！）
+
+## [原始題目](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)
 這題是給定一個不固定長度的 link list, 然後要求刪除最中間的那個 node.
 
-## 值得紀錄之處
-拜讀了[你所不知道的 C 語言： linked list 和非連續記憶體](https://hackmd.io/@sysprog/c-linked-list#%E5%BE%9E-Linux-%E6%A0%B8%E5%BF%83%E7%9A%84%E8%97%9D%E8%A1%93%E8%AB%87%E8%B5%B7)一文中所提到的 "__good taste__" 段落 , 覺得非常有趣而躍躍欲試，所以找這題來練練手。（後來發現底下的例子也有寫到這題😅，而且效率又比我想到的解更好，甚至還有一些記憶體管理的細節，學到了！）  
+## 值得紀錄之處  
 這裡所謂的 good taste 是指利用一些技巧，去減少「特例」發生的情形，進而使程式碼更加精美乾脆。舉例來說，原本在這題常見的解法有兩種：
 1. 把整個 linked list 遍歷，計算有幾個節點。算完再跑一次 `for` 迴圈把最中間的節點刪除。
 2. 利用 `fast` 和 `slow` 兩指標，丟進迴圈裡面， `fast` 每回合前進兩格， `slow` 每回合前進一格，這樣只要一次回圈就可以抓到要刪除的節點並且刪除。  
@@ -37,7 +38,7 @@ public:
 2. 要判斷是否只有一個 node, 若是只有一個 node, 則把該 node 刪除
 3. 若非只有一個 node, 則按照 `fast`, `slow` 做法從頭開始經過此 list 每個節點。
 {{< admonition note "注意" >}}
-由於我需要把目標前一個 node 的 `node->next` 指向目標後一個 node 的 `node->next`, 所以最後 `slow` 會指向目標的上一個 node, 而 `slow->next` 才是要被刪除的節點。也就是說， __1 個 node 跟 2~3 個 node 時，需要刪除的目標不一樣__。
+由於我需要把被刪除的目標前一個 node 的 `node->next` 指向目標後一個 node 的 `node->next`, 所以最後 `slow` 會指向目標的上一個 node, 而 `slow->next` 才是要被刪除的節點。也就是說， __1 個 node 跟 2~3 個 node 時，需要刪除的目標不一樣__。
 
 這會有個問題：我沒辦法巧妙的透過 initialize `slow` 跟 `fast` 兩個指標, 使得 edge case 被消滅。
 換言之，__當 list 只有 1 個 node 的時候，我需要去操作 `head` 而不是 `slow` 才能把目標 node 刪除。__ 也因此才有了下面 indirect pointer 的解法。
