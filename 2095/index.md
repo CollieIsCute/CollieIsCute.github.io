@@ -44,7 +44,7 @@ public:
 換言之，__當 list 只有 1 個 node 的時候，我需要去操作 `head` 而不是 `slow` 才能把目標 node 刪除。__ 也因此才有了下面 indirect pointer 的解法。
 {{< /admonition >}}
 
-承上所述，我會需要某個「東西」，這個東西有辦法視情況選擇我要操作 `head` 還是 `slow`（不完全是這樣，但可以這樣去理解會比較直觀），而那個東西就是間接指標 (indirect pointer) ，一種指向指標記憶體的指標。
+承上所述，我會需要某個「東西」，這個東西有辦法視情況選擇我要操作 `head` 還是 `slow`（不完全是這樣，但可以這樣去理解會比較直觀），而那個東西就是間接指標 (indirect pointer) ，一種指向指標的記憶體位址的指標（有點繞舌😆）。
 
 - 以下程式碼是嘗試練習 indirect pointer 技巧的解法  
   (這個魔法我在[原文](https://hackmd.io/@sysprog/c-linked-list#%E5%BE%9E-Linux-%E6%A0%B8%E5%BF%83%E7%9A%84%E8%97%9D%E8%A1%93%E8%AB%87%E8%B5%B7)花了好幾個小時反覆研究了很多遍，一開始覺得超級不好懂XD)
