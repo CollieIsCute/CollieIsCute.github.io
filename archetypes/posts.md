@@ -11,13 +11,11 @@ keywords: ""
 license: ""
 comment: false
 weight: 0
-
 tags:
 - draft
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
-
 summary: ""
 resources:
 - name: featured-image
