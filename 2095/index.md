@@ -13,6 +13,8 @@
 {{< admonition note "附註" >}}
 兩者的時間複雜度都是 $\log (n)$, 但是後者的程式碼量會因為少一個迴圈而比較少，因此我以後者為比較標準。
 {{< /admonition >}}
+
+### 非 indirect pointer 的解
 - 此程式碼取自 leetcode 論壇的某位大大寫的[詳解文章](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/solutions/2698219/delete-the-middle-node-of-a-linked-list/)微調而得  
 
 ```cpp
@@ -38,15 +40,131 @@ public:
 2. 要判斷是否只有一個 node, 若是只有一個 node, 則把該 node 刪除
 3. 若非只有一個 node, 則按照 `fast`, `slow` 做法從頭開始經過此 list 每個節點。
 {{< admonition note "注意" >}}
-由於我需要把被刪除的目標前一個 node 的 `node->next` 指向目標後一個 node 的 `node->next`, 所以最後 `slow` 會指向目標的上一個 node, 而 `slow->next` 才是要被刪除的節點。也就是說， __1 個 node 跟 2~3 個 node 時，需要刪除的目標不一樣__。
+如果我想操作 `slow` 指標來達成刪除的功能（暫不探討釋放記憶體的部分），就需要把被刪除的目標前一個 node 的 `node->next` 指向目標後一個 node 的 `node->next`, 所以最後 `slow` 會指向目標的上一個 node, 而 `slow->next` 才是要被刪除的節點。(前述程式碼 line 11)  
 
-這會有個問題：我沒辦法巧妙的透過 initialize `slow` 跟 `fast` 兩個指標, 使得 edge case 被消滅。
-換言之，__當 list 只有 1 個 node 的時候，我需要去操作 `head` 而不是 `slow` 才能把目標 node 刪除。__ 也因此才有了下面 indirect pointer 的解法。
+{{< mermaid >}}
+flowchart LR
+	slow --> node_1
+	subgraph node_1
+	next_1
+	end
+	next_1 --> target
+	subgraph target
+	next_2
+	end
+	next_2 --> node_3
+	subgraph node_3
+	next_3
+	end
+{{< /mermaid >}}  
+
+另外根據題意可得，當 list 具有 __1 個 node 跟 2~3 個 node 時，需要刪除的目標會不一樣__ 。
+
+這會有個問題：我沒辦法巧妙的透過 initialize `slow` 跟 `fast` 兩個指標, 使得 edge case 被消滅。換言之，__當 list 只有 1 個 node 的時候，我需要特別操作 `head` 而不是 `slow`, 才能把目標 node 刪除。__ 因此才有了下面 indirect pointer 的解法。
 {{< /admonition >}}
 
-承上所述，我會需要某個「東西」，這個東西有辦法視情況選擇我要操作 `head` 還是 `slow`（不完全是這樣，但可以這樣去理解會比較直觀），而那個東西就是間接指標 (indirect pointer) ，一種指向指標的記憶體位址的指標（有點繞舌😆）。
+承上所述，我會需要某個「東西」，這個東西有辦法視情況具有 `head` 或 `slow` 的功能，而那個東西就是間接指標 (indirect pointer) ，一種指向指標的記憶體位址的指標（有點繞舌😆）。
 
-- 以下程式碼是嘗試練習 indirect pointer 技巧的解法  
+- 原本 `slow` 無法對 `head` 造成影響
+{{< mermaid >}}
+flowchart LR
+	slow --> node_1
+	head --> node_1
+	subgraph node_1
+	next_1
+	end
+	next_1 --> target
+	subgraph target
+	next_2
+	end
+	next_2 --> node_3
+	subgraph node_3
+	next_3
+	end
+{{< /mermaid >}} 
+
+- 使用 `indirect_del` 可以修改 `head`
+	- 刪除前
+	{{< mermaid >}}
+		flowchart LR
+		indirect_del ==> head
+		head --> target
+		subgraph target
+		next_1
+		end
+		next_1 --> node_2
+		subgraph node_2
+		next_2
+		end
+		next_2 --> node_3
+		subgraph node_3
+		next_3
+		end
+	{{< /mermaid >}} 
+
+	```cpp
+	// 因為沒有 edge case, 所以跟後面刪除中間節點的程式碼可以一樣
+	*indirect_del = (*indirect_del)->next;
+	```
+	- 刪除後
+	{{< mermaid >}}
+	flowchart LR
+		indirect_del ==> head
+		head --> node_2
+		subgraph target
+		next_1
+		end
+		next_1 --> node_2
+		subgraph node_2
+		next_2
+		end
+		next_2 --> node_3
+		subgraph node_3
+		next_3
+		end
+	{{< /mermaid >}} 
+
+- 使用 `indirect_del` 也可以刪除中間的任意節點
+	- 刪除前
+	{{< mermaid >}}
+	flowchart LR
+		indirect_del ==> next_1
+		head --> node_1
+		subgraph node_1
+		next_1
+		end
+		next_1 --> target
+		subgraph target
+		next_2
+		end
+		next_2 --> node_3
+		subgraph node_3
+		next_3
+		end
+	{{< /mermaid >}} 
+
+	```cpp
+	*indirect_del = (*indirect_del)->next;
+	```
+	- 刪除後
+	{{< mermaid >}}
+	flowchart LR
+		indirect_del ==> next_1
+		head --> node_1
+		subgraph node_1
+		next_1
+		end
+		next_1 --> node_3
+		subgraph target
+		next_2
+		end
+		next_2 --> node_3
+		subgraph node_3
+		next_3
+		end
+	{{< /mermaid >}} 
+
+### indirect pointer 的解  
   (這個魔法我在[原文](https://hackmd.io/@sysprog/c-linked-list#%E5%BE%9E-Linux-%E6%A0%B8%E5%BF%83%E7%9A%84%E8%97%9D%E8%A1%93%E8%AB%87%E8%B5%B7)花了好幾個小時反覆研究了很多遍，一開始覺得超級不好懂XD)
 ```cpp
 class Solution {
@@ -63,7 +181,6 @@ public:
 ```
 
 因為多了這層「間接的關聯」， `indirect_del` 一開始是指向 `head` 的地址，因此可以快樂地除去前述惱人的 edge case. 之後 `indirect_del` 又可以指向任何一個 node 的 `node->next` 指標，以獲得所有指標的功能。到這邊可能要多對照幾次兩者之間有無 "indirect pointer" 的差別會比較容易理解，理解之後不禁感嘆程式這門藝術真是博大精深！
-
 
 ---
 
