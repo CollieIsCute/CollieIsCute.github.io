@@ -52,10 +52,10 @@ public:
 class Solution {
 public:
     ListNode* deleteMiddle(ListNode* head) {
-		ListNode **indirect_del = &head, *fast = head;
+    ListNode **indirect_del = &head, *fast = head;
     // 利用 go_next 去判斷 indirect_del 需不需要前進一格
-		for(bool go_next = false; fast; fast = fast->next, go_next = !go_next)
-			indirect_del = go_next ? &(*indirect_del)->next : indirect_del;
+    for(bool go_next = false; fast; fast = fast->next, go_next = !go_next)
+      indirect_del = go_next ? &(*indirect_del)->next : indirect_del;
 		*indirect_del = (*indirect_del)->next;
 		return head;
 	}
