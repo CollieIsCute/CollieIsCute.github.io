@@ -17,7 +17,7 @@ tags:
 - leetcode
 - daily
 
-hiddenFromHomePage: false
+hiddenFromHomePage: true
 hiddenFromSearch: false
 summary: ""
 toc:
