@@ -1,8 +1,8 @@
 ---
-title: "2095"
-subtitle: ""
-date: 2022-10-22T00:23:42+08:00
-draft: true
+title: "Leetcode 區"
+date: 2022-10-11T01:08:41+08:00
+
+draft: false
 author: ""
 authorLink: ""
 authorEmail: ""
@@ -13,17 +13,11 @@ comment: false
 weight: 0
 
 tags:
-- leetcode
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
 summary: ""
-resources:
-- name: featured-image
-  src: featured-image.jpg
-- name: featured-image-preview
-  src: featured-image-preview.jpg
 
 toc:
   enable: true
@@ -34,12 +28,6 @@ seo:
   images: []
 
 repost:
-  enable: true
+  enable: false
   url: ""
 ---
-
-
-
-## 值得紀錄之處
-
-## Solution
