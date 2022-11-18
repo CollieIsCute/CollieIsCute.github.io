@@ -1,4 +1,4 @@
-# Leetcode 區首頁
+# Leetcode 區
 
 
 ## 部落格的 leetcode 區用途
@@ -19,5 +19,5 @@
 ---
 
 > 作者:   
-> URL: https://collieiscute.github.io/homepage/  
+> URL: https://collieiscute.github.io/leetcode_homepage/  
 
