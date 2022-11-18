@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 區首頁"
+title: "Leetcode 區"
 date: 2022-10-11T01:08:41+08:00
 tags:
   - leetcode

@@ -39,7 +39,7 @@ theme = "FixIt"
     pre = ""
     post = ""
     name = "Leetcode"
-    url = "homepage"
+    url = "leetcode_homepage"
     title = ""
     weight = 2
     [menu.main.params]
