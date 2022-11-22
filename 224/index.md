@@ -20,7 +20,7 @@ s.erase(remove_if(s.begin(), s.end(), [](unsigned char ch) { return std::isspace
 
 #### `remove` 系列 v.s. `erase`
 這兩個我以前都一直搞不清楚差異，直到寫這題時認真去研究他們之間的差別並紀錄於此。
-- `ForwardIt remove(ForwardIt first, ForwardIt last, const T& value)`: 它在做的事情是移動元素，並不包含刪除元素本身。如果 [first, end) 區間內有任何元素的值 == `value` 則把後面的資料指派給目前這一格元素，最後再回傳一個 iterator 物件當作待會要 `erase()` 的起始點。我覺得他的實作也很有趣，時間複雜度比寫個迴圈不斷 `find` 並刪除快很多（ $O(n^2)$ v.s. $O(n)$ ），我從 [cppreference 複製過來的]()，有興趣的話推薦讀看看。
+- `ForwardIt remove(ForwardIt first, ForwardIt last, const T& value)`: 它在做的事情是移動元素，並不包含刪除元素本身。如果 [first, end) 區間內有任何元素的值 == `value` 則把後面的資料指派給目前這一格元素，最後再回傳一個 iterator 物件當作待會要 `erase()` 的起始點，時間複雜度比寫個迴圈不斷 `find` 並刪除快很多（ $O(n^2)$ v.s. $O(n)$ ），我覺得 [cppreference 複製過來的實作](https://en.cppreference.com/w/cpp/algorithm/remove)蠻有趣的，有興趣的話推薦讀看看。
 ```c++
 template< class ForwardIt, class T >
 ForwardIt remove(ForwardIt first, ForwardIt last, const T& value)
