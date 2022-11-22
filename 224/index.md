@@ -51,7 +51,7 @@ for(auto it = obj.begin(); it <= obj.end(); obj++){
 ```c++
 auto it = obj.begin();
 // auto it = it + 3; // 沒有這種運算
-std::advance(it, 3);
+std::advance(it, 3); // 好用的移動多步工具
 ```
 
 如果之後能夠更深入了解 iterator 的底層實作，再來寫一篇紀錄我對於 iterator 的了解好了😆
