@@ -40,7 +40,7 @@ ForwardIt remove(ForwardIt first, ForwardIt last, const T& value)
 直覺上採用 stack 來判斷括號內區域要不要變號，進入括號就 push 一個新的符號，離開括號則 pop 最上面的符號，即可完成判斷。（如果有 `*`, `/` 會比較麻煩，要多處理四則運算優先度的問題，還好這題不用😅）
 
 ### iterator 問題
-似乎不能把他理解為按照大小排列的指標，紀錄我這陣子有遇到一些坑：
+似乎不能把他理解為按照大小排列的指標，紀錄我把他當作指標用時遇到的坑：
 1. 沒有 `<=` operator, 如果用以下的寫法會有問題。要寫成 `!=` 才正統。
 ```c++
 for(auto it = obj.begin(); it <= obj.end(); obj++){
