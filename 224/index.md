@@ -25,12 +25,12 @@ s.erase(remove_if(s.begin(), s.end(), [](unsigned char ch) { return std::isspace
 template< class ForwardIt, class T >
 ForwardIt remove(ForwardIt first, ForwardIt last, const T& value)
 {
-    first = std::find(first, last, value);
-    if (first != last)
-        for(ForwardIt i = first; ++i != last; )
-            if (!(*i == value))
-                *first++ = std::move(*i);
-    return first;
+	first = std::find(first, last, value);
+	if (first != last)
+		for(ForwardIt i = first; ++i != last; )
+			if (!(*i == value))
+				*first++ = std::move(*i);
+	return first;
 }
 ```
 - 至於 `erase()` 則是可以傳入頭尾兩個 iterator 參數，刪除該區間並且把頭尾接上。
@@ -44,7 +44,7 @@ ForwardIt remove(ForwardIt first, ForwardIt last, const T& value)
 1. 沒有 `<=` operator, 如果用以下的寫法會有問題。要寫成 `!=` 才正統。
 ```c++
 for(auto it = obj.begin(); it <= obj.end(); obj++){
-  // do something
+	// do something
 }
 ```
 2. iterator 沒有直接加上某個常數的運算，但是指標有這種 Syntactic sugar 可以自動根據型別決定要往前多少個 bytes.
