@@ -4,15 +4,16 @@
 拜讀了[你所不知道的 C 語言： linked list 和非連續記憶體](https://hackmd.io/@sysprog/c-linked-list#%E5%BE%9E-Linux-%E6%A0%B8%E5%BF%83%E7%9A%84%E8%97%9D%E8%A1%93%E8%AB%87%E8%B5%B7)一文中所提到的 "__good taste__" 段落 , 覺得非常有趣而躍躍欲試，所以找這題來練練手。（後來發現底下的例子也有寫到這題😅，而且效率又比我想到的解更好，甚至還有一些記憶體管理的細節，學到了！）
 
 ## [原始題目](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)
-這題是給定一個不固定長度 $n$ 的 link list, 然後要求刪除最中間的那個節點（ node ） （精確來說是第 $\lfloor \frac{n}{2} \rfloor$ 個節點）
+這題是給定一個不固定長度 $n$ 的鏈結串列，然後要求刪除最中間的那個節點（ node ） （精確來說是第 $\lfloor \frac{n}{2} \rfloor$ 個節點）
 
 ## 值得紀錄之處  
 這裡所謂的 good taste 是指利用一些技巧，去減少「特例」發生的情形，進而使程式碼更加乾脆俐落。舉例來說，原本在這題常見的解法有兩種：
-1. 先用迴圈把整個 linked list 遍歷，計算有幾個節點。算完再跑一次 `for` 迴圈把最中間的節點刪除。
+1. 先用迴圈把整個鏈結串列遍歷，計算有幾個節點。算完再跑一次 `for` 迴圈把最中間的節點刪除。
 2. 利用 `fast` 和 `slow` 兩指標，丟進迴圈裡面， `fast` 每回合前進兩格， `slow` 每回合前進一格，這樣只要一次迴圈就可以抓到要刪除的節點並且刪除。  
 {{< admonition note "附註" >}}
 兩者的時間複雜度都是 $\log (n)$, 但是後者的程式碼量會因為少一個迴圈而比較少，因此我以後者為比較標準。
 {{< /admonition >}}
+
 
 ### 非 indirect pointer 的解
 - 此程式碼取自 leetcode 論壇的某位大大寫的[詳解文章](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/solutions/2698219/delete-the-middle-node-of-a-linked-list/)微調而得  
