@@ -1,0 +1,19 @@
+# config/_default/config.toml
+
+baseURL = "https://collieiscute.github.io/"  # 替換為你的網站 URL
+defaultContentLanguage = "zh-tw"
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[permalinks]
+  # 設置你的永久鏈接結構，例如：
+  post = "/:year/:month/:day/:slug/"
+
+[taxonomies]
+  # 設置你的分類法，例如：
+  category = "categories"
+  tag = "tags"
