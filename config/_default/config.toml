@@ -1,6 +1,6 @@
 # config/_default/config.toml
 
-baseURL = "https://collieiscute.github.io/"  # 替換為你的網站 URL
+baseURL = "https://blog.collie.tw/"  # 替換為你的網站 URL
 defaultContentLanguage = "zh-tw"
 enableRobotsTXT = true
 paginate = 10
