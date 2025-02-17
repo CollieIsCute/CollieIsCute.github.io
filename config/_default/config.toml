@@ -3,7 +3,8 @@
 baseURL = "https://blog.collie.tw/"  # 替換為你的網站 URL
 defaultContentLanguage = "zh-tw"
 enableRobotsTXT = true
-paginate = 10
+[pagination]
+  pagerSize = 10
 summaryLength = 0
 
 [outputs]
