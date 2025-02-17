@@ -18,3 +18,12 @@ summaryLength = 0
   # 設置你的分類法，例如：
   category = "categories"
   tag = "tags"
+
+[params]
+  title = "Collie 的部落格"
+  
+  [params.homepage]
+    showRecent = true
+
+mainSections = ["posts"]
+
