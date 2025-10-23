@@ -1,6 +1,5 @@
 ---
 title: 考駕照奇遇記-1
-tags: ["daily"]
 date: 2022-04-06
 subtitle: ""
 draft: false
