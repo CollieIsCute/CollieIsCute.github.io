@@ -3,6 +3,7 @@ title: "Leetcode 區"
 date: 2022-10-11T01:08:41+08:00
 tags:
   - leetcode
+  - daily
 
 draft: false
 author: ""
@@ -13,9 +14,6 @@ keywords: ""
 license: ""
 comment: false
 weight: 0
-tags:
-- leetcode
-- daily
 
 hiddenFromHomePage: true
 hiddenFromSearch: false
