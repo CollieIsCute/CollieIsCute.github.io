@@ -1,20 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Indirect Pointer on</title><link>https://blog.collie.tw/tags/indirect-pointer/</link><description>Recent content in Indirect Pointer on</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>© 2025</copyright><lastBuildDate>Sat, 22 Oct 2022 00:23:42 +0800</lastBuildDate><atom:link href="https://blog.collie.tw/tags/indirect-pointer/index.xml" rel="self" type="application/rss+xml"/><item><title>2095. Delete the Middle Node of a Linked List</title><link>https://blog.collie.tw/posts/leetcode/2095/</link><pubDate>Sat, 22 Oct 2022 00:23:42 +0800</pubDate><guid>https://blog.collie.tw/posts/leetcode/2095/</guid><description>&lt;p&gt;拜讀了&lt;a href="https://hackmd.io/@sysprog/c-linked-list#%E5%BE%9E-Linux-%E6%A0%B8%E5%BF%83%E7%9A%84%E8%97%9D%E8%A1%93%E8%AB%87%E8%B5%B7" target="_blank"&gt;你所不知道的 C 語言： linked list 和非連續記憶體&lt;/a&gt;一文中所提到的 &amp;ldquo;&lt;strong&gt;good taste&lt;/strong&gt;&amp;rdquo; 段落 , 覺得非常有趣而躍躍欲試，所以找這題來練練手。（後來發現底下的例子也有寫到這題😅，而且效率又比我想到的解更好，甚至還有一些記憶體管理的細節，學到了！）&lt;/p&gt;
-&lt;h2 class="relative group"&gt;&lt;a href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/" target="_blank"&gt;原始題目&lt;/a&gt;
-&lt;div id="%E5%8E%9F%E5%A7%8B%E9%A1%8C%E7%9B%AE" class="anchor"&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Indirect Pointer on</title><link>https://blog.collie.tw/tags/indirect-pointer/</link><description>Recent content in Indirect Pointer on</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>© 2025</copyright><lastBuildDate>Sat, 22 Oct 2022 00:23:42 +0800</lastBuildDate><atom:link href="https://blog.collie.tw/tags/indirect-pointer/index.xml" rel="self" type="application/rss+xml"/><item><title>2095. Delete the Middle Node of a Linked List</title><link>https://blog.collie.tw/posts/leetcode/2095/</link><pubDate>Sat, 22 Oct 2022 00:23:42 +0800</pubDate><guid>https://blog.collie.tw/posts/leetcode/2095/</guid><description>&lt;p&gt;拜讀了&lt;a
+href="https://hackmd.io/@sysprog/c-linked-list#%E5%BE%9E-Linux-%E6%A0%B8%E5%BF%83%E7%9A%84%E8%97%9D%E8%A1%93%E8%AB%87%E8%B5%B7"
+target="_blank"
+&gt;你所不知道的 C 語言： linked list 和非連續記憶體&lt;/a&gt;一文中所提到的 &amp;ldquo;&lt;strong&gt;good taste&lt;/strong&gt;&amp;rdquo; 段落 , 覺得非常有趣而躍躍欲試，所以找這題來練練手。（後來發現底下的例子也有寫到這題😅，而且效率又比我想到的解更好，甚至還有一些記憶體管理的細節，學到了！）&lt;/p&gt;
+&lt;h2 class="relative group"&gt;&lt;a
+href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/"
+target="_blank"
+&gt;原始題目&lt;/a&gt;
+&lt;div id="原始題目" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#%E5%8E%9F%E5%A7%8B%E9%A1%8C%E7%9B%AE" aria-label="定位點"&gt;#&lt;/a&gt;
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8e%9f%e5%a7%8b%e9%a1%8c%e7%9b%ae" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;
 這題是給定一個不固定長度 \(n\) 的鏈結串列，然後要求刪除最中間的那個節點（ node ） （精確來說是第 \(\lfloor \frac{n}{2} \rfloor\) 個節點）&lt;/p&gt;
 &lt;h2 class="relative group"&gt;值得紀錄之處
-&lt;div id="%E5%80%BC%E5%BE%97%E7%B4%80%E9%8C%84%E4%B9%8B%E8%99%95" class="anchor"&gt;&lt;/div&gt;
+&lt;div id="值得紀錄之處" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#%E5%80%BC%E5%BE%97%E7%B4%80%E9%8C%84%E4%B9%8B%E8%99%95" aria-label="定位點"&gt;#&lt;/a&gt;
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%80%bc%e5%be%97%e7%b4%80%e9%8c%84%e4%b9%8b%e8%99%95" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;這裡所謂的 good taste 是指利用一些技巧，去減少「特例」發生的情形，進而使程式碼更加乾脆俐落。舉例來說，原本在這題常見的解法有兩種：&lt;/p&gt;
@@ -25,10 +29,9 @@ style="text-decoration-line: none !important;" href="#%E5%80%BC%E5%BE%97%E7%B4%8
 class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
 &gt;
 &lt;span
-class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
+class="text-primary-400 pe-3 flex items-center"
 &gt;
-&lt;span class="relative block icon"&gt;
-&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
 &lt;/span&gt;
 &lt;/span&gt;
 &lt;span
@@ -38,15 +41,17 @@ class="dark:text-neutral-300"
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 class="relative group"&gt;非 indirect pointer 的解
-&lt;div id="%E9%9D%9E-indirect-pointer-%E7%9A%84%E8%A7%A3" class="anchor"&gt;&lt;/div&gt;
+&lt;div id="非-indirect-pointer-的解" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#%E9%9D%9E-indirect-pointer-%E7%9A%84%E8%A7%A3" aria-label="定位點"&gt;#&lt;/a&gt;
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9d%9e-indirect-pointer-%e7%9a%84%e8%a7%a3" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;此程式碼取自 leetcode 論壇的某位大大寫的&lt;a href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/solutions/2698219/delete-the-middle-node-of-a-linked-list/" target="_blank"&gt;詳解文章&lt;/a&gt;微調而得&lt;/li&gt;
+&lt;li&gt;此程式碼取自 leetcode 論壇的某位大大寫的&lt;a
+href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/solutions/2698219/delete-the-middle-node-of-a-linked-list/"
+target="_blank"
+&gt;詳解文章&lt;/a&gt;微調而得&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Solution&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;

@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Iterator on</title><link>https://blog.collie.tw/tags/iterator/</link><description>Recent content in Iterator on</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>© 2025</copyright><lastBuildDate>Tue, 22 Nov 2022 16:42:51 +0800</lastBuildDate><atom:link href="https://blog.collie.tw/tags/iterator/index.xml" rel="self" type="application/rss+xml"/><item><title>224. Basic Calculator</title><link>https://blog.collie.tw/posts/leetcode/224/</link><pubDate>Tue, 22 Nov 2022 16:42:51 +0800</pubDate><guid>https://blog.collie.tw/posts/leetcode/224/</guid><description>&lt;h2 class="relative group"&gt;&lt;a href="https://leetcode.com/problems/basic-calculator/" target="_blank"&gt;原始題目&lt;/a&gt;
-&lt;div id="%E5%8E%9F%E5%A7%8B%E9%A1%8C%E7%9B%AE" class="anchor"&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Iterator on</title><link>https://blog.collie.tw/tags/iterator/</link><description>Recent content in Iterator on</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>© 2025</copyright><lastBuildDate>Tue, 22 Nov 2022 16:42:51 +0800</lastBuildDate><atom:link href="https://blog.collie.tw/tags/iterator/index.xml" rel="self" type="application/rss+xml"/><item><title>224. Basic Calculator</title><link>https://blog.collie.tw/posts/leetcode/224/</link><pubDate>Tue, 22 Nov 2022 16:42:51 +0800</pubDate><guid>https://blog.collie.tw/posts/leetcode/224/</guid><description>&lt;h2 class="relative group"&gt;&lt;a
+href="https://leetcode.com/problems/basic-calculator/"
+target="_blank"
+&gt;原始題目&lt;/a&gt;
+&lt;div id="原始題目" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#%E5%8E%9F%E5%A7%8B%E9%A1%8C%E7%9B%AE" aria-label="定位點"&gt;#&lt;/a&gt;
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8e%9f%e5%a7%8b%e9%a1%8c%e7%9b%ae" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;給定字串包含 &lt;code&gt;{ '+', '-', ' ', '(', ')'}&lt;/code&gt; 以及數字，求出算式答案。&lt;/p&gt;
 &lt;h2 class="relative group"&gt;值得紀錄之處
-&lt;div id="%E5%80%BC%E5%BE%97%E7%B4%80%E9%8C%84%E4%B9%8B%E8%99%95" class="anchor"&gt;&lt;/div&gt;
+&lt;div id="值得紀錄之處" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#%E5%80%BC%E5%BE%97%E7%B4%80%E9%8C%84%E4%B9%8B%E8%99%95" aria-label="定位點"&gt;#&lt;/a&gt;
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%80%bc%e5%be%97%e7%b4%80%e9%8c%84%e4%b9%8b%e8%99%95" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;h3 class="relative group"&gt;處理太多條件分支
-&lt;div id="%E8%99%95%E7%90%86%E5%A4%AA%E5%A4%9A%E6%A2%9D%E4%BB%B6%E5%88%86%E6%94%AF" class="anchor"&gt;&lt;/div&gt;
+&lt;div id="處理太多條件分支" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#%E8%99%95%E7%90%86%E5%A4%AA%E5%A4%9A%E6%A2%9D%E4%BB%B6%E5%88%86%E6%94%AF" aria-label="定位點"&gt;#&lt;/a&gt;
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%99%95%e7%90%86%e5%a4%aa%e5%a4%9a%e6%a2%9d%e4%bb%b6%e5%88%86%e6%94%af" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h3&gt;
 &lt;p&gt;我覺得這題最麻煩的坑在於符號太多種了。如果用 &lt;code&gt;if&lt;/code&gt; 來寫的話，會有太多條件分支（ branch condition ），所以我一直很想把某些 branch 合在一起。比如說：&lt;/p&gt;
